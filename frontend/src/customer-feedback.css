@@ -1,0 +1,250 @@
+.customer-feedback-page {
+  min-height: 100vh;
+  padding: 40px 20px 60px;
+  background: #fbf7f0;
+  color: #493326;
+}
+
+.customer-feedback-container {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.customer-feedback-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 30px;
+  color: #76513b;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.customer-feedback-back:hover {
+  color: #a66d45;
+}
+
+.customer-feedback-heading {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.customer-feedback-eyebrow {
+  color: #a77a58;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.customer-feedback-icon {
+  width: 62px;
+  height: 62px;
+  margin: 20px auto 14px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #f0e2d3;
+  color: #956344;
+  font-size: 36px;
+}
+
+.customer-feedback-heading h1 {
+  margin: 0 0 12px;
+  color: #493326;
+  font-size: clamp(27px, 5vw, 36px);
+}
+
+.customer-feedback-heading p {
+  max-width: 540px;
+  margin: 0 auto;
+  color: #806b5d;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+.customer-feedback-form {
+  padding: 32px;
+  background: #fffdfa;
+  border: 1px solid #eadfd3;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(83, 55, 34, 0.07);
+}
+
+.customer-rating-section {
+  padding: 8px 0 28px;
+  margin-bottom: 26px;
+  text-align: center;
+  border-bottom: 1px solid #eee3d8;
+}
+
+.customer-rating-section h2 {
+  margin: 0 0 8px;
+  color: #513a2c;
+  font-size: 19px;
+}
+
+.customer-rating-section p {
+  margin: 0;
+  color: #8b796c;
+  font-size: 14px;
+}
+
+.customer-rating-stars {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0 10px;
+}
+
+.customer-rating-star {
+  padding: 5px;
+  border: none;
+  background: transparent;
+  color: #d5c7b8;
+  cursor: pointer;
+  transition: transform 0.15s ease, color 0.15s ease;
+}
+
+.customer-rating-star.selected {
+  color: #e2a83d;
+}
+
+.customer-rating-star:hover {
+  transform: scale(1.12);
+}
+
+.customer-rating-label {
+  color: #8a6547;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.customer-feedback-field {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-bottom: 22px;
+}
+
+.customer-feedback-field label {
+  color: #533b2d;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.customer-feedback-field label span {
+  color: #9b8a7d;
+  font-weight: 400;
+}
+
+.customer-feedback-field input,
+.customer-feedback-field textarea {
+  width: 100%;
+  padding: 13px 15px;
+  border: 1px solid #e2d5c8;
+  border-radius: 9px;
+  outline: none;
+  background: #fff;
+  color: #493326;
+  font: inherit;
+  font-size: 14px;
+  box-sizing: border-box;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.customer-feedback-field input:focus,
+.customer-feedback-field textarea:focus {
+  border-color: #a77a58;
+  box-shadow: 0 0 0 3px rgba(167, 122, 88, 0.12);
+}
+
+.customer-feedback-field textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.customer-feedback-field small {
+  color: #968477;
+  text-align: right;
+  font-size: 12px;
+}
+
+.customer-feedback-submit {
+  width: 100%;
+  min-height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  border-radius: 9px;
+  background: #79543b;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.customer-feedback-submit:hover:not(:disabled) {
+  background: #5e3f2c;
+  transform: translateY(-1px);
+}
+
+.customer-feedback-submit:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.customer-feedback-success,
+.customer-feedback-error {
+  padding: 13px 15px;
+  margin-bottom: 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.customer-feedback-success {
+  background: #edf6ec;
+  border: 1px solid #c9e4c6;
+  color: #356b35;
+}
+
+.customer-feedback-error {
+  background: #fff0ed;
+  border: 1px solid #f0c9c1;
+  color: #a23d2d;
+}
+
+.customer-feedback-note {
+  margin: 17px 0 0;
+  text-align: center;
+  color: #968477;
+  font-size: 12px;
+}
+
+@media (max-width: 600px) {
+  .customer-feedback-page {
+    padding: 25px 14px 40px;
+  }
+
+  .customer-feedback-form {
+    padding: 23px 17px;
+  }
+
+  .customer-rating-stars {
+    gap: 4px;
+  }
+
+  .customer-rating-star {
+    padding: 4px;
+  }
+
+  .customer-rating-star svg {
+    width: 30px;
+    height: 30px;
+  }
+}

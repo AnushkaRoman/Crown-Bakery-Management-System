@@ -1,0 +1,163 @@
+.checkout-container {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 25px;
+  font-family: Arial, sans-serif;
+}
+
+.checkout-container h1,
+.checkout-container h2 {
+  color: #5b3825;
+}
+
+.checkout-container button {
+  background: #8b5e3c;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.checkout-container button:hover {
+  background: #68432c;
+}
+
+.checkout-container input,
+.checkout-container select,
+.checkout-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #d8c3b5;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+
+/* ---------------- COUPON SECTION ---------------- */
+
+.checkout-coupon-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.checkout-coupon-row input {
+  flex: 1;
+  min-width: 0;
+  padding: 13px 15px;
+  border: 1px solid #dfd2c3;
+  border-radius: 9px;
+  background: #fffdf9;
+  color: #49352b;
+  font: inherit;
+  text-transform: uppercase;
+  outline: none;
+}
+
+.checkout-coupon-row input:focus {
+  border-color: #9b7054;
+}
+
+.checkout-coupon-row button {
+  padding: 12px 22px;
+  border: none;
+  border-radius: 9px;
+  background: #654331;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.checkout-coupon-row button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.checkout-applied-coupon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px;
+  margin-top: 15px;
+  border: 1px solid #b7d6b6;
+  border-radius: 10px;
+  background: #f3faf0;
+}
+
+.checkout-applied-coupon > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #357044;
+  min-width: 0;
+}
+
+.checkout-applied-coupon span {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.checkout-applied-coupon small {
+  color: #64745e;
+}
+
+.checkout-applied-coupon button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border: none;
+  background: transparent;
+  color: #9b4239;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.checkout-coupon-success {
+  margin-top: 10px;
+  color: #357044;
+  font-size: 13px;
+}
+
+.checkout-available-coupons {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-top: 16px;
+  padding: 13px;
+  border-radius: 9px;
+  background: #faf4ec;
+  color: #72543f;
+}
+
+.checkout-available-coupons p {
+  margin: 0 0 3px;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.checkout-available-coupons small {
+  font-size: 12px;
+}
+
+.checkout-discount-row {
+  color: #34804c;
+}
+
+@media (max-width: 480px) {
+  .checkout-coupon-row {
+    flex-direction: column;
+  }
+
+  .checkout-coupon-row button {
+    width: 100%;
+  }
+
+  .checkout-applied-coupon {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

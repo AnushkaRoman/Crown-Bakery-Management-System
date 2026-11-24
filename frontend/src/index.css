@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap');
+
+:root{font-family:'DM Sans',sans-serif;color:#493326;background:#fbf7f1;font-synthesis:none;text-rendering:optimizeLegibility;font-smooth:always;font-weight:400}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-width:320px}button,input{font:inherit}button,a{-webkit-tap-highlight-color:transparent}a{color:inherit;text-decoration:none}button{cursor:pointer}
+
+/* =========================================
+   COMMON WORKSPACE SIDEBAR
+========================================= */
+
+.workspace-layout {
+  min-height: 100vh;
+  display: flex;
+  background: #fbf8f3;
+  color: #563b2d;
+}
+
+/* LEFT SIDEBAR */
+
+.workspace-sidebar {
+  width: 308px;
+  min-width: 270px;
+  min-height: 100vh;
+  padding: 42px 22px 28px;
+  background: #f1e8dc;
+  border-right: 1px solid #e3d5c5;
+  display: flex;
+  flex-direction: column;
+}
+
+.workspace-heading {
+  padding: 0 2px;
+  margin-bottom: 34px;
+}
+
+.workspace-heading .eyebrow {
+  color: #a87554;
+  letter-spacing: 3px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.workspace-heading h2 {
+  margin: 12px 0 0;
+  max-width: 230px;
+  font-family: Georgia, serif;
+  font-size: 28px;
+  line-height: 1.08;
+  color: #492e20;
+}
+
+.workspace-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.workspace-menu-item {
+  min-height: 55px;
+  padding: 12px 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-radius: 12px;
+  color: #674b3a;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.workspace-menu-item:hover {
+  background: #f9f2e9;
+  color: #8e5738;
+}
+
+.workspace-menu-item.active {
+  background: #fffaf4;
+  color: #874d2e;
+  box-shadow: inset 4px 0 #a66c48;
+}
+
+.workspace-menu-icon {
+  width: 22px;
+  text-align: center;
+  font-size: 17px;
+  flex-shrink: 0;
+}
+
+.workspace-back {
+  margin-top: 35px;
+  padding: 10px 2px;
+  color: #8a583c;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.workspace-back:hover {
+  color: #583522;
+}
+
+.workspace-logout {
+  margin-top: 12px;
+  padding: 11px 14px;
+  border: 1px solid #d8c3b0;
+  border-radius: 9px;
+  background: transparent;
+  color: #805239;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+}
+
+.workspace-logout:hover {
+  background: #fffaf4;
+}
+
+/* RIGHT CONTENT */
+
+.workspace-content {
+  flex: 1;
+  min-width: 0;
+  padding: 0 42px 45px;
+}
+
+.workspace-topbar {
+  min-height: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-bottom: 1px solid #eadfd3;
+}
+
+.workspace-user {
+  color: #795640;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.workspace-welcome {
+  padding: 55px 0 35px;
+}
+
+.workspace-welcome .eyebrow,
+.workspace-section-heading .eyebrow {
+  color: #a87554;
+  letter-spacing: 2px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.workspace-welcome h1 {
+  margin: 12px 0;
+  color: #4c3022;
+  font-family: Georgia, serif;
+  font-size: clamp(30px, 4vw, 43px);
+}
+
+.workspace-welcome p {
+  color: #886e5c;
+  font-size: 15px;
+}
+
+.workspace-section-heading {
+  margin-bottom: 20px;
+}
+
+.workspace-section-heading h2 {
+  margin: 8px 0 0;
+  color: #563b2d;
+  font-family: Georgia, serif;
+  font-size: 25px;
+}
+
+.workspace-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.workspace-card {
+  min-height: 155px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  border: 1px solid #eadfd3;
+  border-radius: 14px;
+  background: #fffdf9;
+  color: #583c2c;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.workspace-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(88, 60, 44, 0.08);
+}
+
+.workspace-card-icon {
+  font-size: 25px;
+}
+
+.workspace-card h3 {
+  margin: 16px 0;
+  font-size: 16px;
+}
+
+.workspace-card-link {
+  color: #a66c48;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .workspace-sidebar {
+    width: 260px;
+    min-width: 230px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .workspace-content {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .workspace-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .workspace-layout {
+    flex-direction: column;
+  }
+
+  .workspace-sidebar {
+    width: 100%;
+    min-width: 0;
+    min-height: auto;
+    padding: 25px 16px;
+  }
+
+  .workspace-heading {
+    margin-bottom: 20px;
+  }
+
+  .workspace-menu {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px;
+  }
+
+  .workspace-menu-item {
+    min-height: 52px;
+    padding: 9px;
+    gap: 8px;
+    font-size: 12px;
+  }
+
+  .workspace-menu-icon {
+    font-size: 15px;
+  }
+
+  .workspace-back {
+    margin-top: 15px;
+  }
+
+  .workspace-content {
+    padding: 0 18px 30px;
+  }
+
+  .workspace-topbar {
+    min-height: 70px;
+  }
+
+  .workspace-welcome {
+    padding: 35px 0 25px;
+  }
+
+  .workspace-card-grid {
+    grid-template-columns: 1fr;
+  }
+}
